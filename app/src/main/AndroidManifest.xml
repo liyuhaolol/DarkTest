@@ -16,6 +16,7 @@
             android:name=".InterActivity"
             android:exported="true"
             android:label="@string/app_name"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
             android:theme="@style/Theme.DarkTest">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
