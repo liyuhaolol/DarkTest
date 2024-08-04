@@ -24,12 +24,12 @@ class InterActivity:BaseActivity() {
 
         override fun onConfigurationChanged(newConfig: Configuration) {
             super.onConfigurationChanged(newConfig)
-            Log.e("qwer","$localClassName: Something Changed")
             if ((newConfig.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES) {
                 Log.e("qwer","深色")
+                recreate()
             } else {
                 Log.e("qwer","浅色")
+                recreate()
             }
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
     }
 }
