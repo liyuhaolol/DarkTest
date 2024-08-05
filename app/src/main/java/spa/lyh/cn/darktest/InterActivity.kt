@@ -12,7 +12,6 @@ class InterActivity:BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         b = ActivityInterBinding.inflate(layoutInflater)
         setContentView(b.root)
         b.btn.setOnClickListener {
@@ -25,10 +24,8 @@ class InterActivity:BaseActivity() {
         override fun onConfigurationChanged(newConfig: Configuration) {
             super.onConfigurationChanged(newConfig)
             if ((newConfig.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES) {
-                Log.e("qwer","深色")
                 recreate()
             } else {
-                Log.e("qwer","浅色")
                 recreate()
             }
     }
